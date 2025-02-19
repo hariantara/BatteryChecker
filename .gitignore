@@ -1,0 +1,37 @@
+# Gradle files
+.gradle/
+build/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Local configuration
+/local.properties
+/.idea/
+*.iml
+
+# Android Studio and IntelliJ
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+
+# Log files
+*.log
+
+# Keystore files (security risk!)
+*.jks
+*.keystore
+
+# macOS system files
+.DS_Store
+
+# JetBrains user-specific files
+*.swp
+*.swo
+*.bak
+
+# Dependency caches
+.cxx/
+.externalNativeBuild/
