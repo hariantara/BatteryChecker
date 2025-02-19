@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <path
+        android:fillColor="#2196F3"
+        android:pathData="M36,26h4v4h28v-4h4v4h4v48h-4v4h-36v-4h-4v-48h4v-4zM40,74h28v-40h-28v40zM44,38h20v32h-20v-32z"/>
+    
+    <!-- Charging bolt -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M52,44l-8,16h8l-4,12l12-16h-8l4-12z"/>
+</vector> 

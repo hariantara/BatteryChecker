@@ -29,14 +29,28 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.ui.graphics.Color
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.Box
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        val splashScreen = installSplashScreen()
+        
         super.onCreate(savedInstanceState)
+        
+        // Keep the splash screen visible for a longer duration if needed
+        splashScreen.setKeepOnScreenCondition { false }
+        
         enableEdgeToEdge()
         setContent {
             BatteryCheckerTheme {
-                BatteryCheckerApp()
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+                ) {
+                    BatteryCheckerApp()
+                }
             }
         }
     }
