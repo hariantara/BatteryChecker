@@ -23,6 +23,7 @@ import xyz.batterychecker.screens.ChargingScreen
 import xyz.batterychecker.screens.DischargingScreen
 import xyz.batterychecker.screens.HealthScreen
 import xyz.batterychecker.screens.HistoryScreen
+import xyz.batterychecker.screens.AboutScreen
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
@@ -97,6 +98,12 @@ fun BatteryCheckerApp() {
                     icon = { Icon(painterResource(R.drawable.ic_history), contentDescription = "History") },
                     label = { Text("History") }
                 )
+                NavigationBarItem(
+                    selected = selectedTab == 4,
+                    onClick = { selectedTab = 4 },
+                    icon = { Icon(painterResource(R.drawable.ic_about), contentDescription = "About") },
+                    label = { Text("About") }
+                )
             }
         }
     ) { paddingValues ->
@@ -105,6 +112,7 @@ fun BatteryCheckerApp() {
             1 -> DischargingScreen(Modifier.padding(paddingValues))
             2 -> HealthScreen(Modifier.padding(paddingValues))
             3 -> HistoryScreen(Modifier.padding(paddingValues))
+            4 -> AboutScreen(Modifier.padding(paddingValues))
         }
     }
 }
